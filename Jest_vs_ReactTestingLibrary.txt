@@ -1,0 +1,3 @@
+Jest :
+  Jest - js testing framework
+  jext is a runner that finds tests, runs tests determines whether the tests passed or failed and reports it back in a human readable manner
