@@ -19,3 +19,11 @@ Advantages :
  2 Reliable , consistent and not error prone
  3 Easy to identify and fix features that break tests
  4 Gives confidence when shipping software
+
+Test Driven Development :
+   Test driven development is a software development process where you write tests before writing the software code
+    Once the tests have been written,you then write the code to ensure the tests pass
+    1. Create tests that verify the functionality of a specific feature.
+    2. Write software code that will run the tests successfully when reexecuted.
+    3. Refactor the code optimization while ensuring the tests continue to pass.
+Also called reg green testing as all test go from a red failed state to a green passed state
