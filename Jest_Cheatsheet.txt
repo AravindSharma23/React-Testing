@@ -1,4 +1,48 @@
 Filtering Test :
    ->  test.only() - Runs this test only
    ->  test.skip()  - Runs all test and skip particular test
-Grouping Test :
+
+Grouping Test : - Grouping of multiple test
+
+     ->  describe("Greet",()=>{
+        test(name,()=>{})
+        
+        test(name,()=>{})
+        })
+    ->  describe("Greet",()=>{
+        test(name,()=>{})
+        describe(name,()=>{test(name,()=>{})})  //nested describe
+        
+        })
+    ->  describe.only()  //execute this test only
+    ->  describe.skip()  //execute other tests and skip this test
+
+   ->  describe("",()=>{
+        test("",()=>{}) or it("",()=>{}) // we can use it instead of test
+        fit("",()=>{}) // just like test.only()
+        xit("",()=>{})  //just like test.skip()
+   })
+
+Assertions : - 
+   common Matchers : Refer jestjs official Doc
+         expect(2+2).toBe(4)
+         expect().not.toBe()
+         expect().toEqual()
+         toBeNull matches only null
+         toBeUndefined matches only undefined
+         toBeDefined is the opposite of toBeUndefined
+         toBeTruthy matches anything that an if statement treats as true
+         toBeFalsy matches anything that an if statement treats as false
+
+RTL Queries : - Queries are methods that are used to find elements on page
+       To find single element on page :
+        - toGetBy()
+        -queryBy()
+        -FindBy()  
+
+To find single element on page :
+        - toGetByll()
+        -queryByAll()
+        -FindByAll() 
+      
+
