@@ -1,0 +1,71 @@
+/* 
+name , level , hidden,selected,checked,passed (refer in doc)
+*/
+
+import { screen,render } from "@testing-library/react";
+import Application from "./Application";
+
+describe('Application',()=>{
+    test('RENDERS CORRECTLY',()=>{
+        render(<Application/>)
+        // const textElement = screen.getByRole("textbox"); // if single textbox present means use this
+        // expect(textElement).toBeInTheDocument();
+        const pageHeading = screen.getByRole("heading",
+            {
+                level:1,  // h1 tag
+                name:"Job Application Form"
+            });
+        expect(pageHeading).toBeInTheDocument();
+        
+        const sectionText = screen.getByRole("heading",
+            {
+                level :2, // h2 tag
+                name : "Section 1"
+            }
+        )
+        expect(sectionText).toBeInTheDocument();
+
+        const txtAreaElement = screen.getByRole("textbox",{name:"Name"});// name value should be Label content or button content or aria-label content
+        expect(txtAreaElement).toBeInTheDocument();
+        
+        const bioElement = screen.getByRole("textbox",{name:"Bio"});
+        expect(bioElement).toBeInTheDocument();
+
+        const jobLocationElement = screen.getByRole("combobox");
+        expect(jobLocationElement).toBeInTheDocument();
+
+  
+    })
+})
+
+//Application.tsx
+
+import React from 'react'
+
+const Application = () => {
+  return (
+    <>
+    <h1>Job Application Form</h1>
+    <h2>Section 1</h2>
+<form >
+    <label htmlFor="name">Name</label>
+    <input type="text" name="name" id="name" />
+    <label htmlFor='description'>Description</label>
+    <textarea id="description" name="description"/>
+    <label htmlFor="bio">Bio</label>
+    <textarea name="bio" id="bio"/>
+    <select name="" id="">Country
+        <option value="India">India</option>
+        <option value="US">US</option>
+        <option value="UK">UK</option>
+        <option value="Korea">Korea</option>
+    </select>
+    <input type="checkbox" name="" id="" />
+    <label htmlFor="">I agree to terms and conditions</label>
+    <button type="button">submit</button>
+</form> 
+</>
+ )
+}
+
+export default Application
