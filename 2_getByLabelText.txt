@@ -1,0 +1,29 @@
+
+describe("testCase",()=>{
+   test("test",()=>{
+
+    const inputLabel = screen.getByLabelText("Name"); // To check Name is there as Label
+       expect(inputLabel).toBeInTheDocument();
+
+        const labelText = screen.getByLabelText("I agree to terms and conditions"); // To check this content is there as Label
+        expect(labelText).toBeInTheDocument();
+
+        const labelText1 = screen.getByLabelText("Name",{selector:"input"}); // To specifically check for label name as Name but it should be input
+        expect(labelText1).toBeInTheDocument();
+   })
+})
+
+// Application.tsx
+
+    <label htmlFor="name">Name</label>
+    <input type="text" name="name" id="name" />
+
+      <select name="" id="">Name
+        <option value="India">India</option>
+        <option value="US">US</option>
+        <option value="UK">UK</option>
+        <option value="Korea">Korea</option>
+    </select>
+
+      <input type="checkbox" name="agree" id="agree" />
+    <label htmlFor="agree">I agree to terms and conditions</label>
