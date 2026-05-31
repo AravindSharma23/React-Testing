@@ -44,5 +44,16 @@ To find single element on page :
         - toGetByll()
         -queryByAll()
         -FindByAll() 
+
+RTL Queries :
+ const pageHeading = screen.getByRole('Heading')
+ const nameElement2 = screen.getByLabelText('Name')
+ const nameElement3 = screen.getByPlaceholder('FullName')
+ const paragraphElement = screen.getByText('All fields are mandatory')
+const nameElement4 = screen.getByDisplayValue('Aravind')
+const imageElement = screen.getByAltText('a person with laptop')
+const closeElement = screen.getByTitle("close")
+const customElement = scree.getByTestId('custom-element')
+const listItemElements = screen.getAllByRole('listitem')
       
 
