@@ -1,0 +1,8 @@
+//
+<div>Hello World</div>
+screen.getByText(/World/) // matches whole word
+screen.getByText(/World/i); //matches to case insensitive
+screen.getByText(/^hello world$/i) // starts with hello and ends with world
+
+//custom function 
+screen.getByText((content)=>content.startsWith('Hello'))
