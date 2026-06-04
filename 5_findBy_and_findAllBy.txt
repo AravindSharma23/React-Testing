@@ -1,0 +1,26 @@
+
+findBy() -
+    - Returns a promise  when element matches with query 
+    - Promise will be rejected if no element is found or more than one element is present and also for after default delay of 1000ms
+
+  const [isLoggedIn,setIsLoggedIn] = useState(false);
+
+  useEffect(()=>{
+        setTimeout(()=>{
+          setIsLoggedIn(true)
+        },1001)
+        
+    },[])
+  test('start learning button rendered after delay',async()=>{
+       render(<Skills skills={skills}/>)
+       const learningBtn = await screen.findByRole('button',{
+        name : 'start learning'
+       })
+       expect(learningBtn).toBeInTheDocument();
+   })
+
+findAllBy() - 
+    -  Returns a promise  when array of elements matches with query.
+    - Rejects promise if no element matches with query  after delay of 1000ms
+
+    
