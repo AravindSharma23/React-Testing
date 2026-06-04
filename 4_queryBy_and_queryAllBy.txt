@@ -1,0 +1,16 @@
+queryBy() :
+    - returns matching node for a query and returns null if no match found
+    - useful for asserting an element that is not present
+   -  throws an error when more than one element is present in dom
+
+ test('renders login button',()=>{
+        render(<Skills skills={skills} />)
+        const loginBtn = screen.getByRole('button',{
+            name : 'login'
+        })
+        expect(loginBtn).toBeInTheDocument();
+    })
+
+
+queryAllBy :
+    - returns all the node that matches query and returns an empty array if no elements present
