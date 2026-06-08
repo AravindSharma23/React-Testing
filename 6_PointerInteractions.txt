@@ -1,0 +1,16 @@
+
+convinience APIs
+
+click()
+dblClick()
+tripleClick()
+hover()
+unhover()
+
+Pointer APIs
+
+pointer({keys :'[MouseLeft]'})
+pointer({keys : '[MouseLeft][MouseRight]'})
+pointer('[MouseLeft][MouseRight]')
+pointer('[MouseLeft>]')
+pointer('/MouseLeft')
